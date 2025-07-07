@@ -1,0 +1,15 @@
+# Python virtual environments
+whisper_env/
+venv/
+
+# Uploads and Downloads folders
+uploads/
+downloads/
+
+# Environment and secret files
+.env
+token.json
+credentials.json
+
+# Node-related
+node_modules/

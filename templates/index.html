@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription App</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Transcription and Modification App</h1>
+
+        <!-- Upload audio or video file -->
+        <div class="section">
+            <h3>Upload Audio/Video File:</h3>
+            <input type="file" id="audioFile" accept="audio/*,video/*">
+            <button class="btn" onclick="transcribeAudio()">Transcribe</button>
+        </div>
+
+        <!-- Display transcription -->
+        <div class="section">
+            <h3>Transcription:</h3>
+            <textarea id="transcription" rows="5" cols="40"></textarea>
+        </div>
+
+        <!-- Modify transcription -->
+        <div class="section">
+            <h3>Modify Transcription:</h3>
+            <input type="text" id="modificationInput" placeholder="Enter modification instruction">
+            <button class="btn" onclick="modifyText()">Modify</button>
+        </div>
+
+        <!-- Display modified transcription -->
+        <div class="section">
+            <h3>Modified Transcription:</h3>
+            <textarea id="modifiedText" rows="5" cols="40"></textarea>
+        </div>
+
+        <!-- Save to Google Docs -->
+        <div class="section">
+            <button class="btn" onclick="saveToDocs()">Save to Google Docs</button>
+            <button id="redirectToDocs" class="btn hidden" onclick="redirectToDocs()">Go to Google Docs</button>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="../static/script.js"></script>
+
+    <script>
+        // Variable to store Google Docs URL
+        let googleDocsUrl = '';
+
+        function saveToDocs() {
+            // Assuming you have logic to save modified text to Google Docs
+            // After saving the document, update the googleDocsUrl
+            fetch('/save_to_docs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ modified_text: document.getElementById("modifiedText").value }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    googleDocsUrl = data.document_url; // Store the document URL
+                    document.getElementById("redirectToDocs").style.display = 'inline'; // Show the button
+                    console.log("Document created:", googleDocsUrl);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function redirectToDocs() {
+            // Redirect to the Google Docs URL
+            if (googleDocsUrl) {
+                window.open(googleDocsUrl, '_blank');
+            } else {
+                console.error("No document URL available");
+            }
+        }
+    </script>
+</body>
+
+</html>
