@@ -15,3 +15,4 @@ credentials.json
 node_modules/
 
 Backend/.env
+Frontend/.env
