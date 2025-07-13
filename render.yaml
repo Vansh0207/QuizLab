@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: quizlab-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://vanshkaushik749:test1234@cluster0.x8gbj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: CLOUD_NAME
+        value: dvicywtac
+      - key: API_KEY
+        value: 653296328387236
+      - key: API_SECRET_KEY
+        value: vhBIUImTU6PeqJlEOfj-DUjX6tY
+      - key: SECRET_KEY
+        value: supersecretkey123
+      - key: URL
+        value: http://localhost:5173
