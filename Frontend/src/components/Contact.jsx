@@ -23,7 +23,7 @@ export default function Contact() {
           className="w-full bg-[#2A3B5F] hover:bg-[#0B1930] text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline flex gap-2 items-center"
         >
           <MdEmail />
-          vermasaiyam9@gmail.com
+          vanshkaushik749@gmail.com
         </a>
         <a
           to="https://www.google.com/maps/place/Meerut,+India/@28.994939,77.699936,12z/data=!4m5!3m4!1s0x390d05f37a740361:0x19984d696c61640c!8m2!3d28.994939!4d77.699936"
