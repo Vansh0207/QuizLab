@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { setAuthUser } from "../redux/authSlice";
 import axios from "axios";
 import { Menu, X } from "lucide-react"; // Icons for menu toggle
+import config from "../../config";
 
 export default function Header() {
   const { user } = useSelector((store) => store.auth);
@@ -20,7 +21,7 @@ export default function Header() {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/user/logout", {
+      const res = await axios.get(`${config.NODE_BACKEND}/api/user/logout`, {
         withCredentials: true,
       });
       if (res.data.success) {
@@ -41,8 +42,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-black px-6 text-white shadow-lg z-10 border-b border-gray-900" >
-      <div className="container mx-auto flex justify-between items-center" >
+    <header className="bg-black px-6 text-white shadow-lg z-10 border-b border-gray-900">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to={"/"} className="flex items-center gap-3">
           <img src="logo.png" alt="QuizLabs" className="md:h-20 h-16" />
@@ -64,8 +65,11 @@ export default function Header() {
               <Link
                 key={name}
                 to={path}
-                className={`relative text-lg transition-all duration-300 ${isActive ? "font-bold text-white" : "text-gray-300 hover:text-white"
-                  }`}
+                className={`relative text-lg transition-all duration-300 ${
+                  isActive
+                    ? "font-bold text-white"
+                    : "text-gray-300 hover:text-white"
+                }`}
               >
                 {name}
               </Link>
@@ -122,9 +126,7 @@ export default function Header() {
       {isMenuOpen && (
         // <div className="absolute top-16 left-0 w-full bg-black/90 shadow-lg z-50">
         <div className="md:hidden absolute top-16 left-0 w-full bg-black/100 border-b border-pink-600  shadow-lg z-50 opacity-90  rounded-lg">
-        {/* // <div className="md:hidden absolute top-16 left-0 w-full bg-white/10 backdrop-blur-md rounded-lg border border-white/30 shadow-lg z-50"> */}
-          
-
+          {/* // <div className="md:hidden absolute top-16 left-0 w-full bg-white/10 backdrop-blur-md rounded-lg border border-white/30 shadow-lg z-50"> */}
 
           <nav className="flex flex-col items-center space-y-4 py-4">
             {navItems.map(({ name, path }) => {
@@ -133,8 +135,11 @@ export default function Header() {
                 <Link
                   key={name}
                   to={path}
-                  className={`text-lg transition-all duration-300 ${isActive ? "font-bold text-white" : "text-gray-300 hover:text-white"
-                    }`}
+                  className={`text-lg transition-all duration-300 ${
+                    isActive
+                      ? "font-bold text-white"
+                      : "text-gray-300 hover:text-white"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
