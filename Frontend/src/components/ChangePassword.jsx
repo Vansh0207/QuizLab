@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import config from "../../config";
+import config from "../config";
 
 export default function ChangePassword() {
   const { user } = useSelector((store) => store.auth);

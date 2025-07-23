@@ -4,7 +4,7 @@ import axios from "axios";
 import { Loader2 } from "lucide-react";
 import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbar } from "react-circular-progressbar";
-import config from "../../config";
+import config from "../config";
 
 const QuizPage = () => {
   const { id } = useParams();

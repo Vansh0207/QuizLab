@@ -6,7 +6,7 @@ import moment from "moment";
 import axios from "axios";
 import { toast } from "sonner";
 import { setAuthUser } from "../redux/authSlice";
-import config from "../../config";
+import config from "../config";
 
 const Profile = () => {
   const params = useParams();

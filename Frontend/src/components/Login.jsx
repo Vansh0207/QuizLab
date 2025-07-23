@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuthUser } from "../redux/authSlice.js";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import config from "../../config";
+import config from "../config";
 
 const Login = () => {
   const [show, setShow] = useState(false);

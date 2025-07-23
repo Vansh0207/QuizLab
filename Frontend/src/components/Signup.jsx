@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "sonner";
 import { useSelector } from "react-redux";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import config from "../../config";
+import config from "../config";
 
 const Signup = () => {
   const [show, setShow] = useState(false);

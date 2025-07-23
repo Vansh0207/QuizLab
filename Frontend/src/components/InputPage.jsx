@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
-import config from "../../config";
+import config from "../config";
 
 const loadingTexts = [
   "Loading file...",

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
-import config from "../../config";
+import config from "../config";
 
 const SummaryPage = () => {
   const { id } = useParams();

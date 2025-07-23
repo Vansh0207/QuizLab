@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { setAuthUser } from "../redux/authSlice";
 import axios from "axios";
 import { Menu, X } from "lucide-react"; // Icons for menu toggle
-import config from "../../config";
+import config from "../config";
 
 export default function Header() {
   const { user } = useSelector((store) => store.auth);

@@ -7,7 +7,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import { toast } from "sonner";
 import moment from "moment";
-import config from "../../config";
+import config from "../config";
 
 const HistoryPage = () => {
   const navigate = useNavigate();
