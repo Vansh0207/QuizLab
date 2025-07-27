@@ -121,42 +121,9 @@ Replace `your_mongodb_uri_here`, `your_secret_key_here`, etc., with your actual 
 - Users can manage their **profile information and track earned coins**.
 - Displays user statistics and previous interactions.
 
----
 
-## Screenshots
-
-### 1. Authentication Page
-![Auth Page](screenshots/auth.png)
-
-### 2. Homepage (Upload Section)
-![Homepage](screenshots/homepage.png)
-
-### 3. Summary Page
-![Summary Page](screenshots/summary.png)
-
-### 4. Quiz Page
-![Quiz Page](screenshots/quiz.png)
-
-### 5. Result Page
-![Result Page](screenshots/result.png)
-
-### 6. History Page
-![History Page](screenshots/history.png)
-
-### 7. Profile Page
-![Profile Page](screenshots/profile.png)
-
-### 8. About Page
-![Profile Page](screenshots/about.png)
-
-### 7. Contact Page
-![Contact Page](screenshots/contact.png)
-
----
 
 ## Connect with Me
-
-- **Portfolio:** [Saiyam Verma's Portfolio](https://saiyams-portfolio.vercel.app/)
-- **LinkedIn:** [Saiyam Verma](https://www.linkedin.com/in/saiyam05)
+- **LinkedIn:** [Vansh Kaushik](https://www.linkedin.com/in/vanshkaushik02/)
 
 ---
