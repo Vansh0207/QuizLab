@@ -90,7 +90,7 @@ Replace `your_mongodb_uri_here`, `your_secret_key_here`, etc., with your actual 
 
 ---
 
-## Pages Details
+## Pages Details:
 
 ### 1. Authentication Page
 - Allows users to **sign up and log in** securely using JWT authentication.
